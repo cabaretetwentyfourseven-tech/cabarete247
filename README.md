@@ -17,4 +17,23 @@ Mobile-first marketplace (Quasar + Vue + Supabase + Creem + GitHub Pages). Plann
 3. **M1:** Quasar app in this repo, Supabase project, roles, stub checkout.
 4. **M2:** Creem + webhooks + `ledger_lines` + admin/vendor financial views.
 
-Remote target: `https://github.com/cabaretetwentyfourseven-tech/cabarete247.git` (clone or add `origin` when ready).
+## GitHub: first push
+
+`remote: Repository not found` means GitHub **does not have that repo yet** (or your account cannot see it). The URL must exist **before** `git push`.
+
+1. **Create** the empty repository on GitHub (web UI): org **cabaretetwentyfourseven-tech** → **New repository** → name **`cabarete247`** → leave “Initialize with README” **unchecked** (you already have commits locally).
+2. Confirm you have **push** access to that org (member or deploy key).
+3. Push:
+
+```bash
+cd /path/to/CabareteHTML
+git push -u origin main
+```
+
+If the org or repo name is different, fix the remote:
+
+```bash
+git remote set-url origin https://github.com/<org-or-user>/<repo>.git
+```
+
+Use **HTTPS + GitHub credential helper** or **SSH** (`git@github.com:org/repo.git`) per your setup.
